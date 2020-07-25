@@ -310,7 +310,6 @@
 [endmacro]
 
 
-
 ; ----------------------------------------------------------
 ; [list_item text1="XXX" text2="XXX" storage="XXX" shiryou="XXX"]
 ; 選択肢要素を表示します。
@@ -395,6 +394,22 @@
 
 ;;; マクロで使う実質グローバル変数を別のマクロで初期化するってなんか微妙に感じるなぁ
 
+[endmacro]
+
+;-------------------------------------------------------
+; 追加：リスト表示マクロ
+; ----------------------------------------------------------
+; [list_item2 text1="XXX" text2="XXX" storage="XXX" shiryou="XXX"]
+; リストインデックスは無印と共有
+; storageの参照をkaisetsuフォルダに限らない場所に変更
+; 資料なしのケースのみ対応
+[macro name="list_item2"]
+	[eval exp="tf.image = 'color/col' + f.current_page_index + '.png'"]
+	[image layer="0" storage="&tf.image"      x="  0" y="& tf.index * 95 +  5 " width="960" height="90"]
+	[ptext layer="0" text="%text1"            x=" 20" y="& tf.index * 95 +  9 " bold="bold"   size="40"]
+	[ptext layer="0" text="%text2"            x=" 20" y="& tf.index * 95 + 56 "               size="22"]
+	[clickable color="white" opacity="0"      x="  0" y="& tf.index * 95 +  5 " width="960" height="90" mouseopacity="50" storage="& mp.storage" target="%target"]
+	[eval exp="tf.index = tf.index + 1"]
 [endmacro]
 
 [return]

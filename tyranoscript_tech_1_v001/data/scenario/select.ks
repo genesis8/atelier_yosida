@@ -111,9 +111,9 @@
 ; [list_item]
 ; これは独自マクロです(→macro.ks)。
 ; リストアイテムを表示していきます。
-[list_item text1="x1…連想配列の実験          " text2="セーブはされるのか？    " storage="01_text.ks      " shiryou="no"]
-[list_item text1="02…メッセージを装飾する    " text2="[font][ruby][graph]他   " storage="02_decotext.ks  " shiryou="no"]
-[list_item text1="03…レイヤーについて理解する" text2="[trans][wt][backlay]他  " storage="03_layer.ks     " shiryou="no"]
+[list_item2 text1="x1…連想配列の実験           " text2="セーブはされるのか？    " storage="test/001_dict_test.ks     "]
+[list_item2 text1="x2…メッセージウィンドウ改造 " text2="パクリ構成にしよう      " storage="test/002_text_windows.ks  "]
+[list_item2 text1="x3…オープニングイベント     " text2="～茶番～                " storage="test/003_opening_event.ks "]
 [list_item text1="04…背景を出す              " text2="[bg]                    " storage="04_bg.ks"         shiryou="no"]
 [list_item text1="05…画像オブジェクトを出す  " text2="[image]                 " storage="05_image.ks     " shiryou="no"]
 [list_item text1="06…文字オブジェクトを出す  " text2="[ptext]                 " storage="06_ptext.ks     " shiryou="no"]

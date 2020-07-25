@@ -89,5 +89,22 @@
 [chara_face name="akane"   face="happy"  storage="chara/akane/happy.png"   ]
 [chara_face name="akane"   face="sad"    storage="chara/akane/sad.png"     ]
 
+; ヨシダを定義
+[chara_new  name="yoshida"  jname="ヨシダ" storage="chara/001_yoshida/normal.png"  ]
+[chara_face name="yoshida"   face="angry"  storage="chara/001_yoshida/angry.png"   ]
+[chara_face name="yoshida"   face="doki"   storage="chara/001_yoshida/doki.png"    ]
+[chara_face name="yoshida"   face="happy"  storage="chara/001_yoshida/happy.png"   ]
+[chara_face name="yoshida"   face="sad"    storage="chara/001_yoshida/sad.png"     ]
+
+; ヨウムを定義
+[chara_new  name="youmu"  jname="ヨウム" storage="chara/002_youmu/normal.png"  ]
+[chara_face name="youmu"   face="angry"  storage="chara/002_youmu/angry.png"   ]
+[chara_face name="youmu"   face="doki"   storage="chara/002_youmu/doki.png"    ]
+[chara_face name="youmu"   face="happy"  storage="chara/002_youmu/happy.png"   ]
+[chara_face name="youmu"   face="sad"    storage="chara/002_youmu/sad.png"     ]
+
+; ウシジマを定義
+[chara_new  name="ushijima"  jname="ウシジマ" storage="chara/003_ushijima/normal.png"  ]
+
 ; [return] 帰ります。
 [return]
