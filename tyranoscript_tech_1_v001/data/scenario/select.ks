@@ -114,8 +114,8 @@
 [list_item2 text1="x1…連想配列の実験           " text2="セーブはされるのか？    " storage="test/001_dict_test.ks     "]
 [list_item2 text1="x2…メッセージウィンドウ改造 " text2="パクリ構成にしよう      " storage="test/002_text_windows.ks  "]
 [list_item2 text1="x3…オープニングイベント     " text2="～茶番～                " storage="test/003_opening_event.ks "]
-[list_item text1="04…背景を出す              " text2="[bg]                    " storage="04_bg.ks"         shiryou="no"]
-[list_item text1="05…画像オブジェクトを出す  " text2="[image]                 " storage="05_image.ks     " shiryou="no"]
+[list_item2 text1="x4…状態の表示と選択         " text2="クリックされたボタン取得" storage="test/004_state_drawing.ks "]
+[list_item2 text1="x5…状態の表示と入れ替え     " text2="中々面倒                " storage="test/005_state_drawing_exchange.ks"]
 [list_item text1="06…文字オブジェクトを出す  " text2="[ptext]                 " storage="06_ptext.ks     " shiryou="no"]
 
 ; [anim]
