@@ -193,7 +193,7 @@
 	; clickable … クリックされた際に実行されるjavascriptを定義できない
 	
 	[image layer="0" storage="&tf.image"      x="  5" y="& mp.index * 50 + 85 " width="350" height="40"]
-	[ptext layer="1" text="&tf.text1"         x=" 10" y="& mp.index * 50 + 90 " bold="bold"   size="22"]
+	[ptext layer="0" text="&tf.text1"         x=" 10" y="& mp.index * 50 + 90 " bold="bold"   size="22"]
 	[clickable color="white" opacity="0"      x="  5" y="& mp.index * 50 + 85 " width="350" height="40" mouseopacity="50" target="&tf.target" cond="tf.clickable"]
 	
 [endmacro]
@@ -206,6 +206,7 @@
 
 [func_face_show name="youmu"]
 
+
 [func_view_sale_shelf index=0]
 [func_view_sale_shelf index=1]
 [func_view_sale_shelf index=2]
@@ -214,6 +215,14 @@
 [func_view_sale_shelf index=5]
 [func_view_sale_shelf index=6]
 [func_view_sale_shelf index=7]
+
+[freeimage layer="0" page="back"]
+[call storage="003_show\003_sale_shelf.ks"]
+[call storage="003_show\004_warehouse.ks"]
+[call storage="003_show\002_menu.ks"]
+[trans layer="0" time="1000"]
+
+
 
 ; ゲームを停止させる
 ;    →これをやらないとホイールで進行できてしまう

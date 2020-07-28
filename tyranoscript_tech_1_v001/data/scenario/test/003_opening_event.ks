@@ -19,34 +19,26 @@
 ;------------------------------
 ;独自ウィンドウの設定
 ;------------------------------
-
 [clearfix]
-[free  name="chara_name_area"  layer="message0"]
-[deffont size="32" face="ロゴたいぷゴシック,メイリオ,sans-serif" color="0xffffff" edge="0x000000"]
-[resetfont]
-
-[position layer="message0" left="  0" top="480" width="960" height="160" frame="001_text_frame/test_frame1.png" margint="1" marginl="175" marginr="9" marginb="4" opacity="210"]
-
-[iscript]
-	// 行間をゼロに
-	tyrano.plugin.kag.config.defaultLineSpacing = '0';
-[endscript]
+[call storage="003_show\001_message_window.ks"]
 
 
 ;------------------------------
 ; キャラを表示するマクロ
 ;------------------------------
-[macro name="func_face_show"]
-	[chara_show name="%name" layer="message0" left="2" top="482" width="156" zindex="101"]
-[endmacro]
+;[macro name="func_face_show"]
+;	[chara_show name="%name" layer="message0" left="2" top="482" width="156" zindex="101" time="100"]
+;[endmacro]
+;
+;[macro name="func_face_hide"]
+;	[chara_hide layer="message0" name="%name" time="100"]
+;[endmacro]
+;
+;[macro name="func_face_mod"]
+;	[chara_hide layer="message0" name="%name" time="100"]
+;[endmacro]
 
-[macro name="func_face_hide"]
-	[chara_hide layer="message0" name="%name" time="0"]
-[endmacro]
-
-[macro name="func_face_mod"]
-	[chara_hide layer="message0" name="%name" time="0"]
-[endmacro]
+[call storage="011_event\010_random_rec_night.ks" target="*event1"]
 
 ;-----------------------------------------------------------
 *Part1
@@ -182,6 +174,7 @@
 [func_face_show name="youmu"]
 は・・・はぁ・・・色々ご迷惑おかけしました・・・[p]
 ……[p]
+（ガチャ）[p]
 ヨシダさんーっ！[p]
 [func_face_hide name="youmu"]
 
@@ -191,7 +184,6 @@
 
 [func_face_show name="youmu"]
 呑気にネトゲで遊んでる場合じゃないですよ！[p]
-なんですか！この借金10万＄って！[p]
 [func_face_hide name="youmu"]
 
 [func_face_show name="yoshida"]
@@ -199,6 +191,7 @@
 [func_face_hide name="yoshida"]
 
 [func_face_show name="youmu"]
+なんですか！この借金10万＄って！[p]
 さっきサラ金の人が来てたんですよ！[p]
 [func_face_hide name="youmu"]
 
@@ -310,8 +303,7 @@ XXXとYYYを10個ずつ仕入れましたよ。[p]
 [func_face_hide name="yoshida"]
 
 [func_face_show name="youmu"]
-はい。それと、商品はさきほど仕入れましたが、[p]
-これらは利益の少ない商品ばかりです。[p]
+はい。それと、商品はさきほど仕入れましたが、これらは利益の少ない商品ばかりです。[p]
 市場を利用したり、XXXXたちを頼って、質の高い商品を集めるよう、努力してください。[p]
 [func_face_hide name="youmu"]
 

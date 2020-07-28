@@ -16,7 +16,8 @@
 ; [call]x3 設定用サブルーチンを3つ呼びます。
 [call target="*Sub_Layer"    ]
 [call target="*Sub_Plugin"   ]
-[call target="*Sub_Character"]
+[call storage="002_firstdef\002_chara.ks"]
+;[call target="*Sub_Character"]
 
 ; [jump] title.ksへ。
 [jump storage="title.ks"]
