@@ -68,6 +68,11 @@
 	f.warehouse_max	=30;
 	f.item = {};
 	
+	// 0番itemはダミー
+	f.item[0]= {
+		name:"表示されてたらバグ",
+		stock:0
+	};
 	f.item[1]= {
 		name:"レガシーの構築済みデッキ",
 		ask_price:2,
@@ -220,6 +225,8 @@
 [call storage="003_show\003_sale_shelf.ks"]
 [call storage="003_show\004_warehouse.ks"]
 [call storage="003_show\002_menu.ks"]
+[call storage="003_show\005_status.ks"]
+
 [trans layer="0" time="1000"]
 
 
