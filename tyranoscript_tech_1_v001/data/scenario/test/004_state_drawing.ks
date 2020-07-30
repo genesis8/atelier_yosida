@@ -48,107 +48,6 @@
 	[chara_hide layer="message0" name="%name" time="0"]
 [endmacro]
 
-;-----------------------------------------------------------
-; 状態の定義
-;-----------------------------------------------------------
-[iscript]
-
-	f.hour			= 8;
-	f.minute		= 30;
-	f.day_count		=4;
-	f.mental		=90;
-	f.mental_max	=100;
-	f.dirt			=30;
-	f.dirt_max		=100;
-	f.exp			=25;
-	f.popularity	=13;
-	f.money			=4649;
-	f.fame			=9;
-	f.technic		=13;
-	f.warehouse_max	=30;
-	f.item = {};
-	
-	// 0番itemはダミー
-	f.item[0]= {
-		name:"表示されてたらバグ",
-		stock:0
-	};
-	f.item[1]= {
-		name:"レガシーの構築済みデッキ",
-		ask_price:2,
-		buy_price:3,
-		buy_count:4,
-		stock:5,
-		auto_purchase:6,
-		demand_index:7,
-		process_difficulty:8,
-		description:"商品1の説明"
-	};
-	f.item[2]= {
-		name:"商品2",
-		ask_price:2,
-		buy_price:3,
-		buy_count:4,
-		stock:5,
-		auto_purchase:6,
-		demand_index:7,
-		process_difficulty:8,
-		description:"商品2の説明"
-	};
-	f.item[3]= {
-		name:"商品3",
-		ask_price:2,
-		buy_price:3,
-		buy_count:4,
-		stock:5,
-		auto_purchase:6,
-		demand_index:7,
-		process_difficulty:8,
-		description:"商品3の説明"
-	};
-	f.item[4]= {
-		name:"商品4",
-		ask_price:2,
-		buy_price:3,
-		buy_count:4,
-		stock:5,
-		auto_purchase:6,
-		demand_index:7,
-		process_difficulty:8,
-		description:"商品4の説明"
-	};
-
-	f.sale_shelf = [
-		{able:true	,item_no:1},
-		{able:true	,item_no:2},
-		{able:true	,item_no:0},
-		{able:false	,item_no:0},
-		{able:false	,item_no:0},
-		{able:false	,item_no:0},
-		{able:false	,item_no:0},
-		{able:false	,item_no:0}
-	];
-	
-	f.warehouse = [
-		{item_no:3},
-		{item_no:4},
-		{item_no:0},
-		{item_no:0},
-		{item_no:0},
-		{item_no:0},
-		{item_no:0},
-		{item_no:0}
-	];
-	
-	f.storage_box = [
-		{item_no:1,	stock:10},
-		{item_no:2,	stock:10},
-		{item_no:3,	stock:30},
-		{item_no:4,	stock:30}
-	];
-
-[endscript]
-
 ; 表示
 ; index で棚番号を渡す
 ; 画面デザイン的に2行は無理やなぁ…1行もキツイかも
@@ -209,8 +108,11 @@
 *Part1
 ;-----------------------------------------------------------
 
-[func_face_show name="youmu"]
+; ダミーデータ投入;
+[call storage="900_dummy\001_dummyitem.ks"]
+[call storage="900_dummy\002_dummystatus.ks"]
 
+[func_face_show name="youmu"]
 
 [func_view_sale_shelf index=0]
 [func_view_sale_shelf index=1]
@@ -221,12 +123,14 @@
 [func_view_sale_shelf index=6]
 [func_view_sale_shelf index=7]
 
+
+; 描画;
 [freeimage layer="0" page="back"]
 [call storage="003_show\003_sale_shelf.ks"]
 [call storage="003_show\004_warehouse.ks"]
 [call storage="003_show\002_menu.ks"]
 [call storage="003_show\005_status.ks"]
-
+; 描画結果を反映;
 [trans layer="0" time="1000"]
 
 
