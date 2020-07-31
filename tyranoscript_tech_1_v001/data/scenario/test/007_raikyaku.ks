@@ -47,36 +47,23 @@
 
 [func_face_show name="youmu"]
 
+*MAINROOP
+
 ; 描画;
 [freeimage layer="0" page="back"]
-;[call storage="003_show\003_sale_shelf.ks"]
-;[call storage="003_show\004_warehouse.ks"]
-;[call storage="003_show\002_menu.ks"]
-;[call storage="003_show\005_status.ks"]
+[call storage="003_show\003_sale_shelf.ks"]
+[call storage="003_show\004_warehouse.ks"]
+[call storage="003_show\002_menu.ks"]
+[call storage="003_show\005_status.ks"]
 ; 描画結果を反映;
-;[trans layer="0" time="1000"]
+[trans layer="0" time="0"]
 
+; 来客処理
+[call storage="001_main\010_raikyaku.ks"]
 
-[call storage="001_main\010_raikyaku.ks"]
-[call storage="001_main\010_raikyaku.ks"]
-[call storage="001_main\010_raikyaku.ks"]
-[call storage="001_main\010_raikyaku.ks"]
-[call storage="001_main\010_raikyaku.ks"]
-[call storage="001_main\010_raikyaku.ks"]
-[call storage="001_main\010_raikyaku.ks"]
-[call storage="001_main\010_raikyaku.ks"]
-[call storage="001_main\010_raikyaku.ks"]
-[call storage="001_main\010_raikyaku.ks"]
-[call storage="001_main\010_raikyaku.ks"]
-[call storage="001_main\010_raikyaku.ks"]
-[call storage="001_main\010_raikyaku.ks"]
-[call storage="001_main\010_raikyaku.ks"]
-[call storage="001_main\010_raikyaku.ks"]
-[call storage="001_main\010_raikyaku.ks"]
-[call storage="001_main\010_raikyaku.ks"]
-[call storage="001_main\010_raikyaku.ks"]
-[call storage="001_main\010_raikyaku.ks"]
-[call storage="001_main\010_raikyaku.ks"]
+; 時間を進めて18時になったら終了
+[call storage="004_update\001_tick.ks" target=*MINUTE10]
+[jump target=*MAINROOP cond="f.hour<=18"]
 
 処理に成功しました[p]
 

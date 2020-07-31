@@ -30,7 +30,7 @@
 
 [jump target=*NOT_RAIKYAKU cond="tf.raikyaku==0"]
 
-来客！！[p]
+お客さんが来ました！[p]
 
 *KYAKUSOU
 ; 客層判定は客層値に依存したルーレットで回す
@@ -47,11 +47,14 @@
 	
 	// 客層判定
 	tf.kyakusou = "M";
+	tf.msg = "中流層";
 	if(tf.rand >= tf.thre_HM){
 		tf.kyakusou = "H";
+		tf.msg = "裕福層";
 	}
 	if(tf.rand <= tf.thre_ML){
 		tf.kyakusou = "L";
+		tf.msg = "低流層";
 	}
 [endscript]
 
@@ -59,14 +62,27 @@
 ;客層値[emb exp="f.kyaku_grade"]
 ;スレッショルド[emb exp="tf.thre_HM"]／[emb exp="tf.thre_ML"]
 ;乱数[emb exp="tf.rand"] [p]
-客層は[emb exp="tf.kyakusou"] [p]
+客層は[emb exp="tf.msg"]のようです。[p]
+
+
+*SELL_ITEM
+
+
+*SELL_AMOUNT
 
 [jump target=*END]
 
-;f.kyaku_grade
-
 *NOT_RAIKYAKU
-来客ならず[p]
+…
+[jump target=*END]
+
+*NO_SELL_ITEM
+売れるアイテムがありませんでした[p]
+[jump target=*END]
+
+*NO_SELL_AMOUNT
+需要ルーレットに失敗し一個も販売されませんでした[p]
+[jump target=*END]
 
 *END
 
