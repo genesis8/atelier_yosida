@@ -15,6 +15,7 @@
 	f.money			=4649;
 	f.fame			=9;
 	f.technic		=13;
+	f.kyaku_grade	=0;
 	f.warehouse_max	=30;
 	f.item = {};
 	
