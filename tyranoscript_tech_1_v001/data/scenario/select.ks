@@ -46,7 +46,7 @@
 ; もし一度でもここのシナリオを通ってf.current_page_indexに1が代入される処理が実行されていれば、
 ; もう次回以降このタグの処理が行われることはない、ということになります。
 ; こうすることによって、前回のページ番号の引継ぎができます。
-[eval exp="f.current_page_index = 1" cond="f.current_page_index == undefined"]
+[eval exp="f.current_page_index = 2" cond="f.current_page_index == undefined"]
 [eval exp="f.current_page_label = '*Sub_Page' + f.current_page_index" ]
 
 ; [mask]
@@ -145,7 +145,7 @@
 ; 選択肢表示サブルーチン２ページ目。
 
 [index_reset]
-[list_item text1="07…演出文字オブジェクトを出す    " text2="[mtext]                                           " storage="07_mtext.ks     " shiryou="yes"]
+[list_item2 text1="x7…来客処理" text2="[----]                                           " storage="test/007_raikyaku.ks"]
 [list_item text1="08…キャラクターオブジェクトを出す" text2="[chara_new][chara_show][chara_mod][chara_config]他" storage="08_character.ks " shiryou="yes"]
 [list_item text1="09…画像ボタンオブジェクトを出す  " text2="[button]                                          " storage="09_button.ks    " shiryou="no"]
 [list_item text1="10…固定ボタンオブジェクトを出す  " text2="[button&ensp;fix=true]                            " storage="10_fixbutton.ks " shiryou="no"]
