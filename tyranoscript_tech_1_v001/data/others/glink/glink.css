@@ -209,7 +209,35 @@
 	    color     :          #1E66A6;
 	    background:          #FFFFFF;
 	}
-	
+
+/* my-anim2(改造)
+---------------------------------------------- */
+.my-anim2 {
+	box-sizing   : border-box;
+	text-align   :     center;
+	position     :   absolute;
+    width        :      500px;
+    height       :       50px;
+    border-radius:       25px;
+    padding      :  8px 30px;
+    font-weight  :       bold;
+    text-shadow  :    initial;
+    box-shadow   :    initial;
+    color        :    #FFFFFF;
+    background   :    url('glink.png');
+    transition   :  all 300ms;
+}
+	.my-anim2:hover {
+		transform : translateX(20px);
+		background:          url('glink_hover.png');
+	}
+	.my-anim2:active {
+		transition:          all 0ms;
+		transform : translateX(20px);
+	    color     :          #1E66A6;
+	    background:          #FFFFFF;
+	}
+
 /* my-kanim
 ---------------------------------------------- */
 .my-kanim {

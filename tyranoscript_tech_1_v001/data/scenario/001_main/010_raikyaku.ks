@@ -7,6 +7,7 @@
 *RAIKYAKU
 ; 来客判定は名声値に依存したルーレットを回す
 ; ルーレットはロジスティック関数で算出した閾値と乱数を対決させる
+; [TODO]f.dirtで確率を補正する
 [iscript]
 	// パラメータ：これでゲームバランスを調整する
 	tf.pA=120;
@@ -30,7 +31,7 @@
 
 [jump target=*NOT_RAIKYAKU cond="tf.raikyaku==0"]
 
-お客さんが来ました！[p]
+;お客さんが来ました！[p]
 
 *KYAKUSOU
 ; 客層判定は客層値に依存したルーレットで回す
@@ -56,13 +57,16 @@
 		tf.kyakusou = "L";
 		tf.msg = "低流層";
 	}
+	
+	// ついでに汚れの値を増やす
+	f.dirt++;
 [endscript]
 
 ;客層判定開始[p]
 ;客層値[emb exp="f.kyaku_grade"]
 ;スレッショルド[emb exp="tf.thre_HM"]／[emb exp="tf.thre_ML"]
 ;乱数[emb exp="tf.rand"] [p]
-客層は[emb exp="tf.msg"]のようです。[p]
+[emb exp="tf.msg"]のお客さんが来ました！[p]
 
 
 *SELL_ITEM

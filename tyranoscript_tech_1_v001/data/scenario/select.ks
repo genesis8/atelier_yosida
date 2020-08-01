@@ -146,7 +146,7 @@
 
 [index_reset]
 [list_item2 text1="x7…来客処理" text2="[----]                                           " storage="test/007_raikyaku.ks"]
-[list_item text1="08…キャラクターオブジェクトを出す" text2="[chara_new][chara_show][chara_mod][chara_config]他" storage="08_character.ks " shiryou="yes"]
+[list_item2 text1="x8…メニュー操作" text2="ボタンとか色々使うよ                       " storage="test/008_menu_control.ks"]
 [list_item text1="09…画像ボタンオブジェクトを出す  " text2="[button]                                          " storage="09_button.ks    " shiryou="no"]
 [list_item text1="10…固定ボタンオブジェクトを出す  " text2="[button&ensp;fix=true]                            " storage="10_fixbutton.ks " shiryou="no"]
 [list_item text1="11…文字ボタンオブジェクトを出す  " text2="[glink][loadcss]                                  " storage="11_glink.ks     " shiryou="no"]
