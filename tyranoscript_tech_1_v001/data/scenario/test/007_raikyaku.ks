@@ -63,7 +63,7 @@
 
 ; 時間を進めて18時になったら終了
 [call storage="004_update\001_tick.ks" target=*MINUTE10]
-[jump target=*MAINROOP cond="f.hour<=18"]
+[jump target=*MAINROOP cond="f.hour<18"]
 
 処理に成功しました[p]
 

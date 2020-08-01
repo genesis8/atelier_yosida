@@ -66,9 +66,78 @@
 
 
 *SELL_ITEM
+;売物棚の上にある商品から探索を行う
+;マッチするのであれば需要指数÷100との乱数対決を行い、勝利したら売却が確定する
+[iscript]
+	// 客層と商品グレードがマッチするか判定する関数
+	function ysd_kyakusou_match(kyaku,item){
+		if( kyaku=="L" )
+		{
+			if (item == "L") { return true; }
+			if (item == "M") { return true; }
+		}
+		if( kyaku=="M")
+		{
+			return true;
+		}
+		if( kyaku=="H")
+		{
+			if (item == "M") { return true; }
+			if (item == "H") { return true; }
+		}
+		return false;
+	}
 
+	// 売れなかった場合は -1 を戻す
+	tf.sell_shelf_no = -1;
+	for ( tf.i = 0 ; tf.i < 8 ; tf.i++)
+	{
+		// 空欄または在庫ゼロなら販売対象にならない
+		tf.item_no = f.sale_shelf[tf.i].item_no;
+		if( tf.item_no == 0 ) continue;
+		if( f.item[tf.item_no].stock <= 0) continue;
+		
+		// グレードのマッチングで買ってくれる可能性があるかをチェック
+		tf.item_grade = f.item[tf.item_no].grade;
+		tf.kyaku_grade = tf.kyakusou;
+		tf.matching = ysd_kyakusou_match(tf.kyaku_grade,tf.item_grade);
+		if( tf.matching == false ) continue;
+		
+		// マッチした商品を買ってくれるかを乱数で判定
+		tf.rand = Math.random();
+		tf.thre = f.item[tf.item_no].demand_index / 100.0;
+		
+		if( tf.rand <= tf.thre)
+		{
+			tf.sell_shelf_no = tf.i;
+			break;
+		}
+	}
+[endscript]
+
+[jump target=*NO_SELL_ITEM cond="tf.sell_shelf_no==-1"]
+[emb exp="f.item[f.sale_shelf[tf.sell_shelf_no].item_no].name"]を買ってくれそうです！[p]
 
 *SELL_AMOUNT
+;購入数は1～6を乱数で決定
+;[TODO]販売数に応じてボーナスをつける
+[iscript]
+	tf.sell_item_amount = Math.ceil(Math.random()*6);
+	tf.sell_item_amount = Math.min(tf.sell_item_amount, f.item[f.sale_shelf[tf.sell_shelf_no].item_no].stock);
+[endscript]
+[emb exp="tf.sell_item_amount"]個売れました！[p]
+
+;売却処理
+[iscript]
+	// 在庫減少
+	f.item[f.sale_shelf[tf.sell_shelf_no].item_no].stock -= tf.sell_item_amount;
+	
+	// 販売数増加
+	f.item[f.sale_shelf[tf.sell_shelf_no].item_no].sell_amount += tf.sell_item_amount;
+	
+	// お金が増えるよ
+	f.money += f.item[f.sale_shelf[tf.sell_shelf_no].item_no].sell_price * tf.sell_item_amount;
+[endscript]
 
 [jump target=*END]
 
@@ -77,7 +146,7 @@
 [jump target=*END]
 
 *NO_SELL_ITEM
-売れるアイテムがありませんでした[p]
+何も買ってもらえませんでした…[p]
 [jump target=*END]
 
 *NO_SELL_AMOUNT

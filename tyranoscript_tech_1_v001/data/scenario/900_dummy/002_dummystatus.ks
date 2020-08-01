@@ -13,7 +13,7 @@
 	f.dirt_max		=100;
 	f.exp			=25;
 	f.popularity	=13;
-	f.money			=4649;
+	f.money			=5000;
 	f.fame			=9;
 	f.technic		=13;
 	f.kyaku_grade	=20;
@@ -22,7 +22,7 @@
 	f.sale_shelf = [
 		{able:true	,item_no:1},
 		{able:true	,item_no:2},
-		{able:true	,item_no:0},
+		{able:true	,item_no:6},
 		{able:false	,item_no:0},
 		{able:false	,item_no:0},
 		{able:false	,item_no:0},
