@@ -47,7 +47,7 @@
 
 [func_face_show name="youmu"]
 
-*MAINROOP
+*MainLoop
 
 ; 描画;
 [freeimage layer="0" page="back"]
@@ -58,13 +58,34 @@
 ; 描画結果を反映;
 [trans layer="0" time="0"]
 
+; メニュー用クリッカブルを生成
+[clickable color="white" opacity="0"      x="&  5 + 130 * 0 " y="& 5" width="120" height="30" mouseopacity="50" target="*Shinkou"]
+[clickable color="white" opacity="0"      x="&  5 + 130 * 1 " y="& 5" width="120" height="30" mouseopacity="50" target="*Koudou"]
+[clickable color="white" opacity="0"      x="&  5 + 130 * 2 " y="& 5" width="120" height="30" mouseopacity="50" target="*Gaisyutu"]
+[clickable color="white" opacity="0"      x="&  5 + 130 * 3 " y="& 5" width="120" height="30" mouseopacity="50" target="*Tokusyu"]
+[clickable color="white" opacity="0"      x="&  5 + 130 * 4 " y="& 5" width="120" height="30" mouseopacity="50" target="*Jyouhou"]
+[clickable color="white" opacity="0"      x="&  5 + 130 * 5 " y="& 5" width="120" height="30" mouseopacity="50" target="*Settei"]
+
 何をしようかな？
-[glink x="230" y="100" text="お店の掃除をする  " target="*End" color="my-anim2"]
-[glink x="230" y="160" text="お店のチラシを配る" target="*End" color="my-anim2"]
-[glink x="230" y="220" text="パチ屋に行く      " target="*End" color="my-anim2"]
-[glink x="230" y="280" text="やっぱやめとく    " target="*End" color="my-anim2"]
+;[glink x="230" y="100" text="お店の掃除をする  " target="*End" color="my-anim2"]
+;[glink x="230" y="160" text="お店のチラシを配る" target="*End" color="my-anim2"]
+;[glink x="230" y="220" text="パチ屋に行く      " target="*End" color="my-anim2"]
+;[glink x="230" y="280" text="やっぱやめとく    " target="*End" color="my-anim2"]
 [s]
 
+
+*Shinkou
+[cm]	[call storage="001_main\021_shinkou.ks"]	[jump target="*End"]
+*Koudou
+[cm]	[call storage="001_main\022_koudou.ks"]		[jump target="*End"]
+*Gaisyutu
+[cm]	[call storage="001_main\023_gaisyutu.ks"]	[jump target="*End"]
+*Tokusyu
+[cm]	[call storage="001_main\024_tokusyu.ks"]	[jump target="*End"]
+*Jyouhou
+[cm]	[call storage="001_main\025_jyouhou.ks"]	[jump target="*End"]
+*Settei
+[cm]	[call storage="001_main\026_settei.ks"]		[jump target="*End"]
 
 ;-----------------------------------------------------------
 *End
