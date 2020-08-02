@@ -71,30 +71,30 @@
 ;[glink x="230" y="160" text="お店のチラシを配る" target="*End" color="my-anim2"]
 ;[glink x="230" y="220" text="パチ屋に行く      " target="*End" color="my-anim2"]
 ;[glink x="230" y="280" text="やっぱやめとく    " target="*End" color="my-anim2"]
-[s]
 
-
-*Shinkou
-[cm]	[call storage="001_main\021_shinkou.ks"]	[jump target="*End"]
-*Koudou
-;[cm]	[call storage="001_main\022_koudou.ks"]		[jump target="*End"]
-
-; テスト
+; ジャンプバック地点を登録 
 [iscript]
 	f.jbs = "test\\008_menu_control.ks";
 	f.jbt = "*End";
 [endscript]
 
-[cm]	[jump storage="001_main\101_num_input.ks"]		[jump target="*End"]
+[s]
+
+
+*Shinkou
+[cm]	[jump storage="001_main\021_shinkou.ks"]	[jump target="*End"]
+*Koudou
+[cm]	[jump storage="001_main\022_koudou.ks"]		[jump target="*End"]
+;[cm]	[jump storage="001_main\101_num_input.ks"]		[jump target="*End"]
 
 *Gaisyutu
-[cm]	[call storage="001_main\023_gaisyutu.ks"]	[jump target="*End"]
+[cm]	[jump storage="001_main\023_gaisyutu.ks"]	[jump target="*End"]
 *Tokusyu
-[cm]	[call storage="001_main\024_tokusyu.ks"]	[jump target="*End"]
+[cm]	[jump storage="001_main\024_tokusyu.ks"]	[jump target="*End"]
 *Jyouhou
-[cm]	[call storage="001_main\025_jyouhou.ks"]	[jump target="*End"]
+[cm]	[jump storage="001_main\025_jyouhou.ks"]	[jump target="*End"]
 *Settei
-[cm]	[call storage="001_main\026_settei.ks"]		[jump target="*End"]
+[cm]	[jump storage="001_main\026_settei.ks"]		[jump target="*End"]
 
 ;-----------------------------------------------------------
 *End

@@ -7,4 +7,4 @@
 
 *END
 
-[return]
+[jump storage="&f.jbs" target="&f.jbt"]
