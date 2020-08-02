@@ -59,7 +59,7 @@
 [trans layer="0" time="0"]
 
 ; 来客処理
-[call storage="001_main\010_raikyaku.ks"]
+[call storage="004_update\010_raikyaku.ks"]
 
 ; 時間を進めて18時になったら終了
 [call storage="004_update\001_tick.ks" target=*MINUTE10]
