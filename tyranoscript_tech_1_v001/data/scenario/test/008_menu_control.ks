@@ -67,10 +67,6 @@
 [clickable color="white" opacity="0"      x="&  5 + 130 * 5 " y="& 5" width="120" height="30" mouseopacity="50" target="*Settei"]
 
 何をしようかな？
-;[glink x="230" y="100" text="お店の掃除をする  " target="*End" color="my-anim2"]
-;[glink x="230" y="160" text="お店のチラシを配る" target="*End" color="my-anim2"]
-;[glink x="230" y="220" text="パチ屋に行く      " target="*End" color="my-anim2"]
-;[glink x="230" y="280" text="やっぱやめとく    " target="*End" color="my-anim2"]
 
 ; ジャンプバック地点を登録 
 [iscript]
