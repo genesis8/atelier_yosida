@@ -77,7 +77,16 @@
 *Shinkou
 [cm]	[call storage="001_main\021_shinkou.ks"]	[jump target="*End"]
 *Koudou
-[cm]	[call storage="001_main\022_koudou.ks"]		[jump target="*End"]
+;[cm]	[call storage="001_main\022_koudou.ks"]		[jump target="*End"]
+
+; テスト
+[iscript]
+	f.jbs = "test\\008_menu_control.ks";
+	f.jbt = "*End";
+[endscript]
+
+[cm]	[jump storage="001_main\101_num_input.ks"]		[jump target="*End"]
+
 *Gaisyutu
 [cm]	[call storage="001_main\023_gaisyutu.ks"]	[jump target="*End"]
 *Tokusyu
