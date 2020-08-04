@@ -62,7 +62,7 @@
 数字入力をテストします。[p]
 
 [iscript]
-	f.jbs = "test\\010_num_input.ks";
+	f.jbs = "test/010_num_input.ks";
 	f.jbt = "*End";
 	f.input_max = "89006";
 [endscript]

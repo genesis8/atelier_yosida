@@ -45,6 +45,9 @@
 [call storage="900_dummy\001_dummyitem.ks"]
 [call storage="900_dummy\002_dummystatus.ks"]
 
+; マクロ登録
+[call storage="005_macro\002_item_add_judge.ks"]
+
 [func_face_show name="youmu"]
 
 *MainLoop
