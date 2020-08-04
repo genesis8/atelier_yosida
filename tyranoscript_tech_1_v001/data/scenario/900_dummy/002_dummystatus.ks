@@ -20,9 +20,9 @@
 	f.warehouse_max	=30;
 		
 	f.sale_shelf = [
-		{able:true	,item_no:1},
-		{able:true	,item_no:2},
-		{able:true	,item_no:6},
+		{able:true	,item_no:101},
+		{able:true	,item_no:150},
+		{able:true	,item_no:0},
 		{able:false	,item_no:0},
 		{able:false	,item_no:0},
 		{able:false	,item_no:0},

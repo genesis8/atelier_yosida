@@ -148,7 +148,7 @@
 [list_item2 text1="x7…来客処理" text2="[----]                                           " storage="test/007_raikyaku.ks"]
 [list_item2 text1="x8…メニュー操作" text2="ボタンとか色々使うよ                       " storage="test/008_menu_control.ks"]
 [list_item2 text1="x9…アイテム追加可否判定  " text2="item_add_judge" storage="test/009_item_add_judge.ks"]
-[list_item text1="10…固定ボタンオブジェクトを出す  " text2="[button&ensp;fix=true]                            " storage="10_fixbutton.ks " shiryou="no"]
+[list_item2 text1="xA…数字入力  " text2="[button&ensp;fix=true]                            " storage="test\010_num_input.ks "]
 [list_item text1="11…文字ボタンオブジェクトを出す  " text2="[glink][loadcss]                                  " storage="11_glink.ks     " shiryou="no"]
 [list_item text1="12…オブジェクトを動かす！        " text2="[anim][kanim][chara_move][quake][keyframe]他      " storage="12_anim.ks      " shiryou="no"]
 [anim name="prev" left="-100" time="0" effect="easeOutBack"]
