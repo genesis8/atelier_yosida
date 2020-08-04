@@ -4,11 +4,17 @@
 ;  f.jbt
 ; を指定し、そこに戻すようにする
 
+; さらに
+;  f.input_max
+; で入力最大値を「必ず」制御する。
+; この変数は文字列として渡す必要がある。
+
+; 戻り値は
+;  f.input
+; なのだが、これも何となく文字列として返すことにする。
 ;-----------------------------------------------------------
 *Start
 ;-----------------------------------------------------------
-
-実際に、数字だけを入力できるソフトウェアキーボードを作ってみました。[l]
 
 ;-----------------------------------------------------------
 *Part1
@@ -43,9 +49,14 @@
 *Sub_Input
 
 [iscript]
-if (f.input.length < 8) {
-f.input = f.input + tf.num
-}
+	if (f.input.length < 8) {
+		f.input = f.input + tf.num
+		
+		if ( Number(f.input) > Number(f.input_max))
+		{
+			f.input = f.input_max;
+		}
+	}
 [endscript]
 [ptext layer="0" x="0" y="0" name="ptext" overwrite="true" text="&f.input"]
 [return]
@@ -65,7 +76,14 @@ f.input = f.input.substr(0, f.input.length - 1)
 [freeimage layer="1"]
 [clearfix name="fix_phone"]
 
-あなたが入力したのは「[emb exp="f.input"]」だね。[p]
+; 未入力はゼロとして扱う
+; 正直ここの >= がなぜ動いているのか分からない（文字列と数値を比較しているため）
+[iscript]
+	if ( ( f.input >=  1 ) == false )
+	{
+		f.input = "0";
+	}
+[endscript]
 
 ;-----------------------------------------------------------
 *Part2
