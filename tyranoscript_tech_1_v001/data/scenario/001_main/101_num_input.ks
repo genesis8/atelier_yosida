@@ -50,7 +50,8 @@
 
 [iscript]
 	if (f.input.length < 8) {
-		f.input = f.input + tf.num
+		// Number化→String化 で "0000" や "0021" などの入力を防ぐ
+		f.input = String( Number( f.input + tf.num ) )
 		
 		if ( Number(f.input) > Number(f.input_max))
 		{
