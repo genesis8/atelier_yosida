@@ -61,35 +61,20 @@
 ; メニュー用クリッカブルを生成
 アイテム追加可否判定を行います。アウトプットはティラノライダーの変数ビューにて確認下さい。[p]
 
-[iscript]
-	f.add_judge_item_no = 1;
-[endscript]
-[call storage="004_update\020_item_add_judge.ks"]処理①[p]
+; [output]
+;    f.iaj_target … 追加するのは倉庫か売物棚か。"SHELF","WAREHOUSE" のどちらか。
+;    f.iaj_method … 既存アイテムへの個数追加か新規アイテムとしての登録か。"ADD","NEW"のどちらか。
+;    f.iaj_slot   … スロット番号。-1 なら追加不可、可能なら 0から7の値のどれか。
+;    f.iaj_num    … 倉庫キャパシティから見た、最大追加可能個数。なお、これが0であってもf.iaj_slotは-1とはしない。
 
-[iscript]
-	f.add_judge_item_no = 2;
-[endscript]
-[call storage="004_update\020_item_add_judge.ks"]処理②[p]
+[call storage="005_macro\002_item_add_judge.ks"]
 
-[iscript]
-	f.add_judge_item_no = 3;
-[endscript]
-[call storage="004_update\020_item_add_judge.ks"]処理③[p]
-
-[iscript]
-	f.add_judge_item_no = 4;
-[endscript]
-[call storage="004_update\020_item_add_judge.ks"]処理④[p]
-
-[iscript]
-	f.add_judge_item_no = 5;
-[endscript]
-[call storage="004_update\020_item_add_judge.ks"]処理⑤[p]
-
-[iscript]
-	f.add_judge_item_no = 6;
-[endscript]
-[call storage="004_update\020_item_add_judge.ks"]処理⑥[p]
+[item_add_judge add_judge_item_no=1]処理1[p]
+[item_add_judge add_judge_item_no=2]処理2[p]
+[item_add_judge add_judge_item_no=3]処理3[p]
+[item_add_judge add_judge_item_no=4]処理4[p]
+[item_add_judge add_judge_item_no=5]処理5[p]
+[item_add_judge add_judge_item_no=6]処理6[p]
 
 ;-----------------------------------------------------------
 *End
