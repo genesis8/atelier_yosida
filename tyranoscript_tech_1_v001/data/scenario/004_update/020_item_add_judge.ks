@@ -50,9 +50,9 @@
 	{
 		for (tf.i = 0 ; tf.i < 8 ; tf.i++)
 		{
-			if ( f.sale_shelf[tf.i].able && ( f.sale_shelf[tf.i].item_no == 0 ) )
+			if ( f.warehouse[tf.i].item_no == 0 )
 			{
-				f.iaj_target = "SHELF";
+				f.iaj_target = "WAREHOUSE";
 				f.iaj_method = "NEW";
 				f.iaj_slot = tf.i;
 				break;
@@ -61,9 +61,9 @@
 		
 		for (tf.i = 0 ; tf.i < 8 ; tf.i++)
 		{
-			if ( f.warehouse[tf.i].item_no == 0 )
+			if ( ( f.sale_shelf[tf.i].able == true ) && ( f.sale_shelf[tf.i].item_no == 0 ) )
 			{
-				f.iaj_target = "WAREHOUSE";
+				f.iaj_target = "SHELF";
 				f.iaj_method = "NEW";
 				f.iaj_slot = tf.i;
 				break;
