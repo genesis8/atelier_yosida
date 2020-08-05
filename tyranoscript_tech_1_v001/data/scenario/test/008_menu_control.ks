@@ -75,11 +75,10 @@
 ; ジャンプバック地点を登録 
 [iscript]
 	f.jbs = "test\\008_menu_control.ks";
-	f.jbt = "*End";
+	f.jbt = "*MainLoop";
 [endscript]
 
 [s]
-
 
 *Shinkou
 [cm]	[jump storage="001_main\021_shinkou.ks"]	[jump target="*End"]
