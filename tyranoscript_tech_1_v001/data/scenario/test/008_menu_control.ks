@@ -46,20 +46,21 @@
 [call storage="900_dummy\002_dummystatus.ks"]
 
 ; マクロ登録
-[call storage="005_macro\002_item_add_judge.ks"]
+[call storage="005_macro\001_load_all.ks"]
 
 [func_face_show name="youmu"]
 
 *MainLoop
 
 ; 描画;
-[freeimage layer="0" page="back"]
-[call storage="003_show\003_sale_shelf.ks"]
-[call storage="003_show\004_warehouse.ks"]
-[call storage="003_show\002_menu.ks"]
-[call storage="003_show\005_status.ks"]
+[update_main_window]
+;[freeimage layer="0" page="back"]
+;[call storage="003_show\003_sale_shelf.ks"]
+;[call storage="003_show\004_warehouse.ks"]
+;[call storage="003_show\002_menu.ks"]
+;[call storage="003_show\005_status.ks"]
 ; 描画結果を反映;
-[trans layer="0" time="0"]
+;[trans layer="0" time="0"]
 
 ; メニュー用クリッカブルを生成
 [clickable color="white" opacity="0"      x="&  5 + 130 * 0 " y="& 5" width="120" height="30" mouseopacity="50" target="*Shinkou"]

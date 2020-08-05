@@ -78,7 +78,8 @@
 	}
 [endscript]
 
-購入しました。[p]
+[update_main_window]
+購入したぞい。[p]
 
 [jump target=*Choice]
 

@@ -67,7 +67,8 @@
 ;    f.iaj_slot   … スロット番号。-1 なら追加不可、可能なら 0から7の値のどれか。
 ;    f.iaj_num    … 倉庫キャパシティから見た、最大追加可能個数。なお、これが0であってもf.iaj_slotは-1とはしない。
 
-[call storage="005_macro\002_item_add_judge.ks"]
+; 判定用マクロをロード
+[call storage="005_macro\001_load_all.ks"]
 
 [item_add_judge add_judge_item_no=1]処理1[p]
 [item_add_judge add_judge_item_no=2]処理2[p]
