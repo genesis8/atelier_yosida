@@ -28,6 +28,13 @@
 [emb exp="f.item[tf.buy_item_no].ask_price"]＄です。[p]
 
 [item_add_judge add_judge_item_no="&tf.buy_item_no"]
+
+; 商品キャパシティが足りないので買えないケース
+[jump target="*BuyCapa0" cond="f.iaj_num==0"]
+
+; スロットに空きがないから買えないケース
+[jump target="*BuySlot0" cond="f.iaj_slot==-1"]
+
 商品キャパシティ的には[emb exp="f.iaj_num"]個買えそうです。[p]
 
 [iscript]
@@ -45,11 +52,46 @@
 [jump storage="001_main\101_num_input.ks"]
 
 *BuyNum
+; 0個が選択された時は買わない場合のメッセージを出す
+[jump target="*BuyNum0" cond="f.input=='0'"]
 
 [emb exp="f.input"]個購入します。[p]
 
-（購入処理がまだない）[p]
 
+[iscript]
+	if (f.iaj_target == "SHELF")
+	{
+		// 商品を増やす
+		f.sale_shelf[f.iaj_slot].item_no = tf.buy_item_no;
+		f.item[tf.buy_item_no].stock += Number(f.input);
+		// お金を減らす
+		f.money -= f.item[tf.buy_item_no].ask_price * f.input;
+	}
+	
+	if (f.iaj_target == "WAREHOUSE")
+	{
+		// 商品を増やす
+		f.warehouse[f.iaj_slot].item_no = tf.buy_item_no;
+		f.item[tf.buy_item_no].stock += Number(f.input);
+		// お金を減らす
+		f.money -= f.item[tf.buy_item_no].ask_price * f.input;
+	}
+[endscript]
+
+購入しました。[p]
+
+[jump target=*Choice]
+
+*BuyNum0
+やめときますか。[p]
+[jump target=*Choice]
+
+*BuyCapa0
+商品キャパシティがいっぱいで買えない…。[p]
+[jump target=*Choice]
+
+*BuySlot0
+売物棚と倉庫に空きがないから買えない…[p]
 [jump target=*Choice]
 
 *Yametoku
