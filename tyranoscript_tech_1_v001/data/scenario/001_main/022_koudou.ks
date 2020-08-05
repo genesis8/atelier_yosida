@@ -13,7 +13,7 @@
 *Choice
 そして僕にできるコト
 [glink x="230" y="100" text="お店の掃除をする  " target="*Souji"    color="my-anim2"]
-[glink x="230" y="160" text="お店のチラシを配る" target="*Chirashi" color="my-anim2"]
+[glink x="230" y="160" text="お店の宣伝をする"   target="*Senden" color="my-anim2"]
 [glink x="230" y="220" text="パチ屋に行く      " target="*Pachi"    color="my-anim2"]
 [glink x="230" y="280" text="やっぱやめとく    " target="*Yametoku" color="my-anim2"]
 [s]
@@ -29,8 +29,13 @@
 既にこれ以上ないくらいにキレイだよ。[p]
 [jump target=*Choice]
 
-*Chirashi
-営業活動も大事だよね[p]
+*Senden
+[iscript]
+	f.jbs="001_main/022_koudou.ks"
+	f.jbt="*Choice";
+[endscript]
+
+[jump storage="001_main/031_koudou_senden.ks"]
 [jump target=*Choice]
 
 *Pachi
