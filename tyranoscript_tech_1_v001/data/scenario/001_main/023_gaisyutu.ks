@@ -15,6 +15,7 @@
 
 [glink x="230" y="100" text="薬屋へ買い出しに行く" target="*Kusuri"    color="my-anim2"]
 [glink x="230" y="160" text="カード屋へ買い出しに行く" target="*Card" color="my-anim2"]
+[glink x="230" y="220" text="書店卸売所へ行く" target="*Oroshi" color="my-anim2"]
 [glink x="230" y="280" text="やっぱやめとく    " target="*Yametoku" color="my-anim2"]
 [s]
 
@@ -36,6 +37,16 @@
 	f.jbt = "*Choice";
 [endscript]
 [jump storage="001_main\042_shop_card.ks"]
+
+*Oroshi
+卸へへ行くかァ～[p]
+;ジャンプバック先
+[iscript]
+	f.jbs = "001_main\\023_gaisyutu.ks";
+	f.jbt = "*Choice";
+[endscript]
+[jump storage="001_main\043_shop_oroshi.ks"]
+
 
 [jump target=*End]
 

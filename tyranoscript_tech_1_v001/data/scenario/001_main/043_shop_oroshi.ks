@@ -1,25 +1,25 @@
 ;-----------------------------------------------------
-; ショップ：カード屋
+; ショップ：卸売り
 ;-----------------------------------------------------
 
 *Start
 
 ; 別の場所にジャンプするので、ジャンプバック先を別名保存する（バグの温床になりそうだなぁ）
 [iscript]
-	f.jbs_042 = f.jbs;
-	f.jbt_042 = f.jbt;
+	f.jbs_043 = f.jbs;
+	f.jbt_043 = f.jbt;
 [endscript]
 
-（画面と顔窓切り替え：カード屋）[p]
+（画面と顔窓切り替え：卸売所）[p]
 
 *Choice
 何を買おうかな？
 
-[glink x="230" y="100" text="スタンのカード"       exp=" tf.buy_item_no = '101' " target="*Buy" color="my-anim2"]
-[glink x="230" y="160" text="パイオニアのカード"   exp=" tf.buy_item_no = '102' " target="*Buy" color="my-anim2"]
-[glink x="230" y="220" text="モダンのカード"       exp=" tf.buy_item_no = '103' " target="*Buy" color="my-anim2"]
-[glink x="230" y="280" text="レガシーのカード"     exp=" tf.buy_item_no = '104' " target="*Buy" color="my-anim2"]
-[glink x="230" y="340" text="ヴィンテージのカード" exp=" tf.buy_item_no = '105' " target="*Buy" color="my-anim2"]
+[glink x="230" y="100" text="デアゴスティーニ"       exp=" tf.buy_item_no = '150' " target="*Buy" color="my-anim2"]
+[glink x="230" y="160" text="白黒ドラマDVD"          exp=" tf.buy_item_no = '152' " target="*Buy" color="my-anim2"]
+[glink x="230" y="220" text="小学生向け歴史マンガ"   exp=" tf.buy_item_no = '154' " target="*Buy" color="my-anim2"]
+[glink x="230" y="280" text="江戸時代のイラスト作品" exp=" tf.buy_item_no = '156' " target="*Buy" color="my-anim2"]
+[glink x="230" y="340" text="京都のイラスト集" exp=" tf.buy_item_no = '158' " target="*Buy" color="my-anim2"]
 [glink x="230" y="400" text="買うのをやめる" target="*Yametoku" color="my-anim2"]
 [s]
 
@@ -41,7 +41,7 @@
 	tf.max_num_money = Math.floor( f.money / f.item[tf.buy_item_no].ask_price );
 	f.input_max = String( Math.min(f.iaj_num , tf.max_num_money) );
 	
-	f.jbs = "001_main/042_shop_card.ks";
+	f.jbs = "001_main/043_shop_oroshi.ks";
 	f.jbt = "*BuyNum";
 
 [endscript]
@@ -100,4 +100,4 @@
 [jump target=*End]
 
 *End
-[jump storage="&f.jbs_042" target="&f.jbt_042"]
+[jump storage="&f.jbs_043" target="&f.jbt_043"]
