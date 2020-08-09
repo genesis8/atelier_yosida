@@ -16,7 +16,9 @@
 [glink x="230" y="100" text="薬屋へ買い出しに行く" target="*Kusuri"    color="my-anim2"]
 [glink x="230" y="160" text="カード屋へ買い出しに行く" target="*Card" color="my-anim2"]
 [glink x="230" y="220" text="書店卸売所へ行く" target="*Oroshi" color="my-anim2"]
-[glink x="230" y="280" text="やっぱやめとく    " target="*Yametoku" color="my-anim2"]
+[glink x="230" y="280" text="今村建築設計事務所へ行く" target="**Kenchiku" color="my-anim2"]
+[glink x="230" y="340" text="カウカウファイナンスへ行く" target="Ginkou" color="my-anim2"]
+[glink x="230" y="400" text="やっぱやめとく    " target="*Yametoku" color="my-anim2"]
 [s]
 
 *Kusuri
@@ -39,7 +41,7 @@
 [jump storage="001_main\042_shop_card.ks"]
 
 *Oroshi
-卸へへ行くかァ～[p]
+卸へ行くかァ～[p]
 ;ジャンプバック先
 [iscript]
 	f.jbs = "001_main\\023_gaisyutu.ks";
@@ -47,11 +49,21 @@
 [endscript]
 [jump storage="001_main\043_shop_oroshi.ks"]
 
+*Kenchiku
+改装の依頼をしに行くよ。[p]
+;ジャンプバック先
+[iscript]
+	f.jbs = "001_main\\023_gaisyutu.ks";
+	f.jbt = "*Choice";
+[endscript]
+[jump storage="001_main\044_shop_kenchiku.ks"]
 
-[jump target=*End]
+*Ginkou
+年貢の納め時だな、ヨシダー。[p]
+[jump target=*Choice]
 
 *Yametoku
-金が勿体ないしやめとくかァ～[p]
+外出は自粛しとこう。[p]
 [jump target=*End]
 
 *End
