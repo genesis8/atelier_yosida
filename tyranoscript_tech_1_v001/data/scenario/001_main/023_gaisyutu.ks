@@ -60,7 +60,12 @@
 
 *Ginkou
 年貢の納め時だな、ヨシダー。[p]
-[jump target=*Choice]
+;ジャンプバック先
+[iscript]
+	f.jbs = "001_main\\023_gaisyutu.ks";
+	f.jbt = "*Choice";
+[endscript]
+[jump storage="001_main/045_shop_ginkou.ks"]
 
 *Yametoku
 外出は自粛しとこう。[p]

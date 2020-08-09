@@ -47,6 +47,8 @@
 		{item_no:3,	stock:30},
 		{item_no:4,	stock:30}
 	];
+	
+	f.debt = 100000;
 [endscript]
 
 [return]
