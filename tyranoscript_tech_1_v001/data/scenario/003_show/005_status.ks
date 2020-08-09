@@ -33,7 +33,7 @@
 ;---------------------------------------------------
 [iscript]
 	tf.image = 'color/col2.png';
-	tf.text = f.day_count + '日目 ' + f.hour + ':' + f.minute;
+	tf.text = f.day_count + '日目 ' + ('0' + f.hour).slice(-2) + ':' + ('0'+f.minute).slice(-2);
 [endscript]
 [image layer="0" page="back" storage="&tf.image"      x="&  5 + 780" y="& 5 + 0" width="170" height="40"]
 [ptext layer="0" page="back" text="&tf.text"          x="& 10 + 780" y="&10 + 0" bold="bold"   size="22"]
