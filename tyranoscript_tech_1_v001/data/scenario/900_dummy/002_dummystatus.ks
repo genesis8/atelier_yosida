@@ -42,10 +42,14 @@
 	];
 	
 	f.storage_box = [
-		{item_no:1,	stock:10},
+		{item_no:1,	stock:5},
 		{item_no:2,	stock:10},
-		{item_no:3,	stock:30},
-		{item_no:4,	stock:30}
+		{item_no:3,	stock:15},
+		{item_no:4,	stock:20},
+		{item_no:0,	stock:0},
+		{item_no:0,	stock:0},
+		{item_no:0,	stock:0},
+		{item_no:0,	stock:0},
 	];
 	
 	f.debt = 100000;

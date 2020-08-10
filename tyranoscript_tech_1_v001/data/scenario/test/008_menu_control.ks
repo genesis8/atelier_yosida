@@ -62,6 +62,9 @@
 ; 描画結果を反映;
 ;[trans layer="0" time="0"]
 
+;TEST
+[button name="role_button" role="window"     graphic="window0/close.png"  enterimg="window0/close2.png"  x="& 7 * 80" y="615"]
+
 ; メニュー用クリッカブルを生成
 [clickable color="white" opacity="0"      x="&  5 + 130 * 0 " y="& 5" width="120" height="30" mouseopacity="50" target="*Shinkou"]
 [clickable color="white" opacity="0"      x="&  5 + 130 * 1 " y="& 5" width="120" height="30" mouseopacity="50" target="*Koudou"]
