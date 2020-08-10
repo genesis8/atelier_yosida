@@ -8,8 +8,8 @@
 [destroy]
 
 ; [bg][chara_show][wait] 解説画面用の背景、キャラを表示してから、ちょっと待機します。
-[bg         time="  0" storage="room.jpg"]
-[wait       time="100"]
+[bg       time="  0" storage="room.jpg"]
+[wait     time="100"]
 [mask_off time="400"]
 
 ;-----------------------------------------------------------
@@ -50,54 +50,15 @@
 
 [func_face_show name="youmu"]
 
-*MainLoop
-
-; 描画;
-[update_main_window]
-;[freeimage layer="0" page="back"]
-;[call storage="003_show\003_sale_shelf.ks"]
-;[call storage="003_show\004_warehouse.ks"]
-;[call storage="003_show\002_menu.ks"]
-;[call storage="003_show\005_status.ks"]
-; 描画結果を反映;
-;[trans layer="0" time="0"]
-
 ;TEST
 [button name="role_button" role="window"     graphic="window0/close.png"  enterimg="window0/close2.png"  x="& 7 * 80" y="615"]
 
-; メニュー用クリッカブルを生成
-[clickable color="white" opacity="0"      x="&  5 + 130 * 0 " y="& 5" width="120" height="30" mouseopacity="50" target="*Shinkou"]
-[clickable color="white" opacity="0"      x="&  5 + 130 * 1 " y="& 5" width="120" height="30" mouseopacity="50" target="*Koudou"]
-[clickable color="white" opacity="0"      x="&  5 + 130 * 2 " y="& 5" width="120" height="30" mouseopacity="50" target="*Gaisyutu"]
-[clickable color="white" opacity="0"      x="&  5 + 130 * 3 " y="& 5" width="120" height="30" mouseopacity="50" target="*Tokusyu"]
-[clickable color="white" opacity="0"      x="&  5 + 130 * 4 " y="& 5" width="120" height="30" mouseopacity="50" target="*Jyouhou"]
-[clickable color="white" opacity="0"      x="&  5 + 130 * 5 " y="& 5" width="120" height="30" mouseopacity="50" target="*Settei"]
-
-何をしようかな？
-
-; ジャンプバック地点を登録 
+; 一日分の処理のメインループに移動
 [iscript]
-	f.jbs = "test\\008_menu_control.ks";
-	f.jbt = "*MainLoop";
+	f.jbs = "test/008_menu_control.ks";
+	f.jbt = "*End";
 [endscript]
-
-[s]
-
-*Shinkou
-[cm]	[jump storage="001_main\021_shinkou.ks"]	[jump target="*End"]
-*Koudou
-[cm]	[jump storage="001_main\022_koudou.ks"]		[jump target="*End"]
-;[cm]	[jump storage="001_main\101_num_input.ks"]		[jump target="*End"]
-
-*Gaisyutu
-[cm]	[jump storage="001_main\023_gaisyutu.ks"]	[jump target="*End"]
-*Tokusyu
-[cm]	[jump storage="001_main\024_tokusyu.ks"]	[jump target="*End"]
-*Jyouhou
-[cm]	[jump storage="001_main\025_jyouhou.ks"]	[jump target="*End"]
-*Settei
-[cm]	[jump storage="001_main\026_settei.ks"]		[jump target="*End"]
-
+[jump storage="001_main/011_day_menu.ks"]
 ;-----------------------------------------------------------
 *End
 ;-----------------------------------------------------------
