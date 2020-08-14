@@ -40,7 +40,6 @@
 ;-----------------------------------------------------------
 *Part1
 ;-----------------------------------------------------------
-
 ; ダミーデータ投入;
 [call storage="900_dummy\001_dummyitem.ks"]
 [call storage="900_dummy\002_dummystatus.ks"]
@@ -49,6 +48,8 @@
 [call storage="005_macro\001_load_all.ks"]
 
 [func_face_show name="youmu"]
+
+処理を開始します[p]
 
 ;TEST
 [button name="role_button" role="window"     graphic="window0/close.png"  enterimg="window0/close2.png"  x="& 7 * 80" y="615"]
