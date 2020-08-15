@@ -66,7 +66,7 @@
 [endmacro]
 
 [macro name="func_face_mod"]
-	[chara_hide layer="message0" name="%name" face="%face" time="100"]
+	[chara_mod layer="message0" name="%name" face="%face" time="100"]
 [endmacro]
 
 [return]

@@ -5,7 +5,7 @@
 ; いったんすべての顔窓を閉じる
 ; [func_face_hide name="yoshida"]
 ;[func_face_hide name="youmu"]
-[chara_hide_all time=1000 wait=true]
+[chara_hide_all time=100 wait=true layer="message0"]
 
 [func_face_show name="youmu" face="sad"]
 
@@ -16,6 +16,9 @@
 一体どこにいったんだろう？[p]
 …この家はお世辞にも泥棒に入られるような家じゃないし…[p]
 これはつまり…やっぱりその…[p]
+
+[func_face_mod name="youmu" face="ase"]
+
 身内の犯行…？（名推理）[p]
 …問い詰めてみるか…怖いけど…[p]
 （ドンドン！ドンドン！）[p]
@@ -47,7 +50,7 @@
 [func_face_hide name="yoshida"]
 
 
-[func_face_show name="youmu"]
+[func_face_show name="youmu" face="doki"]
 
 …！なに勝手に人のお金、使っているんですかーっ！！[p]
 
@@ -62,7 +65,7 @@
 [func_face_hide name="yoshida"]
 
 
-[func_face_show name="youmu"]
+[func_face_show name="youmu" face="confuse"]
 
 くぅ～…使われたくないからこそ「へそくり」として隠していたのに…[p]
 
@@ -87,7 +90,7 @@
 [func_face_hide name="ushijima"]
 
 
-[func_face_show name="youmu"]
+[func_face_show name="youmu" face="sad"]
 
 …？サラ金が、うちに何か？[p]
 
@@ -105,7 +108,7 @@
 [func_face_hide name="ushijima"]
 
 
-[func_face_show name="youmu"]
+[func_face_show name="youmu" face="doki"]
 …！？ちょ…ちょっと待って下さい。[p]
 借金のことなんて知りませんよ！？[p]
 [func_face_hide name="youmu"]
@@ -115,7 +118,7 @@
 はぁ…しかし、これがその証拠と言いますか…借用書になります。[p]
 [func_face_hide name="ushijima"]
 
-[func_face_show name="youmu"]
+[func_face_show name="youmu" face="doki"]
 …！じゅ…じゅ…10万＄！？[p]
 [func_face_hide name="youmu"]
 
@@ -125,7 +128,7 @@
 それっきりでして・・・[p]
 [func_face_hide name="ushijima"]
 
-[func_face_show name="youmu"]
+[func_face_show name="youmu" face="ase"]
 …300＄…私の「へそくり」と同じ額じゃ…[p]
 [func_face_hide name="youmu"]
 
@@ -134,10 +137,11 @@
 なるべく早いうちに返済を済ましてください。お願いします。[p]
 [func_face_hide name="ushijima"]
 
-[func_face_show name="youmu"]
+[func_face_show name="youmu" face="ase"]
 は・・・はぁ・・・色々ご迷惑おかけしました・・・[p]
 ……[p]
 （ガチャ）[p]
+[func_face_mod name="youmu" face="angry"]
 ヨシダさんーっ！[p]
 [func_face_hide name="youmu"]
 
@@ -145,7 +149,7 @@
 あ～うるさい…頭に響く…きちぃ…[p]
 [func_face_hide name="yoshida"]
 
-[func_face_show name="youmu"]
+[func_face_show name="youmu" face="angry"]
 呑気にネトゲで遊んでる場合じゃないですよ！[p]
 [func_face_hide name="youmu"]
 
@@ -153,7 +157,7 @@
 麻雀は実質仕事だよ。[p]
 [func_face_hide name="yoshida"]
 
-[func_face_show name="youmu"]
+[func_face_show name="youmu" face="angry"]
 なんですか！この借金10万＄って！[p]
 さっきサラ金の人が来てたんですよ！[p]
 [func_face_hide name="youmu"]
@@ -162,7 +166,7 @@
 あれはサラ金じゃなくて闇金だから安心してよ。[p]
 [func_face_hide name="yoshida"]
 
-[func_face_show name="youmu"]
+[func_face_show name="youmu" face="sad"]
 サラ金の方がまだマシなのでは…？[p]
 [func_face_hide name="youmu"]
 
@@ -170,7 +174,7 @@
 あ～うるさいうるさい…[p]
 [func_face_hide name="yoshida"]
 
-[func_face_show name="youmu"]
+[func_face_show name="youmu" face="angry"]
 どうせ、またこの借金は私に支払わせる気でしょう！？[p]
 [func_face_hide name="youmu"]
 
@@ -178,7 +182,7 @@
 俺に借金を返済する能力があるとでも？[p]
 [func_face_hide name="yoshida"]
 
-[func_face_show name="youmu"]
+[func_face_show name="youmu" face="angry"]
 （このオッサン開き直りやがった・・・！）[p]
 [func_face_hide name="youmu"]
 
@@ -188,7 +192,7 @@
 もぅ…[p]
 [func_face_hide name="yoshida"]
 
-[func_face_show name="youmu"]
+[func_face_show name="youmu" face="ase"]
 10万＄の貯金を作るのに、どれだけ働かなければいけないか…[p]
 ヨシダさんも身を持って体験してください…！[p]
 [func_face_hide name="youmu"]
@@ -199,7 +203,7 @@
 [func_face_hide name="yoshida"]
 
 
-[func_face_show name="youmu"]
+[func_face_show name="youmu" face="noroi"]
 ヨシダさんが働かないなら、今日がヨシダさんの命日になりますよ？[p]
 [func_face_hide name="youmu"]
 
@@ -209,7 +213,7 @@
 いわゆる反抗期ってやつか…[p]
 [func_face_hide name="yoshida"]
 
-[func_face_show name="youmu"]
+[func_face_show name="youmu" face="confuse"]
 …働いてください。ヨシダさん…（切実）[p]
 [func_face_hide name="youmu"]
 
@@ -218,7 +222,7 @@
 今回ばかりはヨウムちゃんの気迫に押されたよ…[p]
 [func_face_hide name="yoshida"]
 
-[func_face_show name="youmu"]
+[func_face_show name="youmu" face="happy"]
 それじゃぁ…！[p]
 [func_face_hide name="youmu"]
 
@@ -257,7 +261,7 @@ XXXとYYYを10個ずつ仕入れましたよ。[p]
 ふーん。なんかややこしいけど…そのうち慣れるよね。[p]
 [func_face_hide name="yoshida"]
 
-[func_face_show name="youmu"]
+[func_face_show name="youmu" face="sad"]
 そう願いたいところです…[p]
 [func_face_hide name="youmu"]
 
