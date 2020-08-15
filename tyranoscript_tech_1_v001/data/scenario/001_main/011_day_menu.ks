@@ -300,7 +300,10 @@
 	}
 [endscript]
 
-; 同じものが選ばれていた場合はアイテム固有メニューへ飛ぶ
+; 空欄で同じものが選ばれていた場合は戻る;
+[jump target=*MainLoop cond="f.sale_shelf[tf.Click1stSale2ndSale].item_no==0 && tf.item_menu_flg == true"]
+
+; 空欄以外で同じものが選ばれていた場合はアイテム固有メニューへ飛ぶ
 [jump storage="001_main/012_item_menu.ks" cond="tf.item_menu_flg"]
 
 ; それ以外は通常の交換
@@ -517,7 +520,10 @@
 	}
 [endscript]
 
-; 同じものが選ばれていた場合はアイテム固有メニューへ飛ぶ
+; 空欄で同じものが選ばれていた場合は戻る;
+[jump target=*MainLoop cond="f.warehouse[tf.Click1stWare2ndWare].item_no==0 && tf.item_menu_flg == true"]
+
+; 空欄以外で同じものが選ばれていた場合はアイテム固有メニューへ飛ぶ
 [jump storage="001_main/012_item_menu.ks" cond="tf.item_menu_flg"]
 
 ; それ以外は通常の交換
