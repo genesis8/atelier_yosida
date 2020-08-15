@@ -29,6 +29,28 @@
 [chara_face name="youmu"   face="noroi"   storage="chara/002_youmu/noroi.png"   ]
 [chara_face name="youmu"   face="tere"    storage="chara/002_youmu/tere.png"    ]
 
+; レイムを定義
+[chara_new  name="reimu"  jname="レイム"  storage="chara/004_reimu/normal.png"  ]
+[chara_face name="reimu"   face="angry"   storage="chara/004_reimu/angry.png"   ]
+[chara_face name="reimu"   face="doki"    storage="chara/004_reimu/doki.png"    ]
+[chara_face name="reimu"   face="happy"   storage="chara/004_reimu/happy.png"   ]
+[chara_face name="reimu"   face="sad"     storage="chara/004_reimu/sad.png"     ]
+[chara_face name="reimu"   face="confuse" storage="chara/004_reimu/confuse.png" ]
+[chara_face name="reimu"   face="doya"    storage="chara/004_reimu/doya.png"    ]
+[chara_face name="reimu"   face="noroi"   storage="chara/004_reimu/noroi.png"   ]
+[chara_face name="reimu"   face="tere"    storage="chara/004_reimu/tere.png"    ]
+
+; マリサを定義
+[chara_new  name="marisa"  jname="マリサ"  storage="chara/005_marisa/normal.png"  ]
+[chara_face name="marisa"   face="angry"   storage="chara/005_marisa/angry.png"   ]
+[chara_face name="marisa"   face="doki"    storage="chara/005_marisa/doki.png"    ]
+[chara_face name="marisa"   face="happy"   storage="chara/005_marisa/happy.png"   ]
+[chara_face name="marisa"   face="sad"     storage="chara/005_marisa/sad.png"     ]
+[chara_face name="marisa"   face="confuse" storage="chara/005_marisa/confuse.png" ]
+[chara_face name="marisa"   face="doya"    storage="chara/005_marisa/doya.png"    ]
+[chara_face name="marisa"   face="noroi"   storage="chara/005_marisa/noroi.png"   ]
+[chara_face name="marisa"   face="tere"    storage="chara/005_marisa/tere.png"    ]
+
 ; ウシジマを定義
 [chara_new  name="ushijima"  jname="ウシジマ" storage="chara/003_ushijima/normal.png"  ]
 
