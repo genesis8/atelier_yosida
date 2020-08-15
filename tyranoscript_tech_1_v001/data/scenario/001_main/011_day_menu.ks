@@ -160,6 +160,32 @@
 [func_Click1stSale2ndWare index=5]
 [func_Click1stSale2ndWare index=6]
 [func_Click1stSale2ndWare index=7]
+
+;---------------------------------------------
+; 売物棚と交換：売物棚用クリッカブルを作成
+;---------------------------------------------
+
+[macro name="func_Click1stSale2ndSale"]
+	[iscript]
+		if ( f.sale_shelf[mp.index]["able"] == false ) {
+			tf.clickable=false;
+		}else{
+			tf.clickable=true;
+		};
+		tf.target="Click1stSale2ndSale"+mp.index;
+	[endscript]
+	[clickable color="white" opacity="0"      x="  5" y="& mp.index * 50 + 85 " width="380" height="40" mouseopacity="50" target="&tf.target" cond="tf.clickable"]
+[endmacro]
+
+[func_Click1stSale2ndSale index=0]
+[func_Click1stSale2ndSale index=1]
+[func_Click1stSale2ndSale index=2]
+[func_Click1stSale2ndSale index=3]
+[func_Click1stSale2ndSale index=4]
+[func_Click1stSale2ndSale index=5]
+[func_Click1stSale2ndSale index=6]
+[func_Click1stSale2ndSale index=7]
+
 [s]
 
 ;---------------------------------------------
@@ -216,6 +242,60 @@
 [jump target=*MainLoop]
 
 ;---------------------------------------------
+; 売物棚と交換：売物棚クリッカブルの着地点
+;---------------------------------------------
+*Click1stSale2ndSale0
+[cm]
+[eval exp="tf.Click1stSale2ndSale = 0"]
+@jump target=*Click1stSale2ndSale
+
+*Click1stSale2ndSale1
+[cm]
+[eval exp="tf.Click1stSale2ndSale = 1"]
+@jump target=*Click1stSale2ndSale
+
+*Click1stSale2ndSale2
+[cm]
+[eval exp="tf.Click1stSale2ndSale = 2"]
+@jump target=*Click1stSale2ndSale
+
+*Click1stSale2ndSale3
+[cm]
+[eval exp="tf.Click1stSale2ndSale = 3"]
+@jump target=*Click1stSale2ndSale
+
+*Click1stSale2ndSale4
+[cm]
+[eval exp="tf.Click1stSale2ndSale = 4"]
+@jump target=*Click1stSale2ndSale
+
+*Click1stSale2ndSale5
+[cm]
+[eval exp="tf.Click1stSale2ndSale = 5"]
+@jump target=*Click1stSale2ndSale
+
+*Click1stSale2ndSale6
+[cm]
+[eval exp="tf.Click1stSale2ndSale = 6"]
+@jump target=*Click1stSale2ndSale
+*Click1stSale2ndSale7
+[cm]
+[eval exp="tf.Click1stSale2ndSale = 7"]
+@jump target=*Click1stSale2ndSale
+
+*Click1stSale2ndSale
+[emb exp="tf.Click1stSale2ndSale"]と入れ替えます。[p]
+
+[iscript]
+	tf.dummy = f.sale_shelf[tf.Click1stSale2ndSale].item_no;
+	f.sale_shelf[tf.Click1stSale2ndSale].item_no = f.sale_shelf[tf.Click1stSale].item_no;
+	f.sale_shelf[tf.Click1stSale].item_no = tf.dummy;
+[endscript]
+
+[jump target=*MainLoop]
+
+
+;---------------------------------------------
 ; 倉庫用クリッカブルの着地点
 ;---------------------------------------------
 *Click1stWare0
@@ -264,7 +344,7 @@
 どれと入れ替えますか？
 
 ;-----------------------------------------------------------
-; 売物棚との交換の選択肢を出すマクロ
+; 売物棚との交換：倉庫用クリッカブルを作成
 ;-----------------------------------------------------------
 [macro name="func_Click1stWare2ndSale"]	
 	[iscript]
@@ -286,9 +366,32 @@
 [func_Click1stWare2ndSale index=5]
 [func_Click1stWare2ndSale index=6]
 [func_Click1stWare2ndSale index=7]
+
+;---------------------------------------------
+; 売物棚と交換：倉庫用クリッカブルを作成
+;---------------------------------------------
+[macro name="func_Click1stWare2ndWare"]	
+	[iscript]
+		tf.target="Click1stWare2ndWare"+mp.index;
+	[endscript]
+	[clickable color="white" opacity="0"      x="&  5 + 390" y="& mp.index * 50 + 85 " width="380" height="40" mouseopacity="50" target="&tf.target"]
+[endmacro]
+
+[func_Click1stWare2ndWare index=0]
+[func_Click1stWare2ndWare index=1]
+[func_Click1stWare2ndWare index=2]
+[func_Click1stWare2ndWare index=3]
+[func_Click1stWare2ndWare index=4]
+[func_Click1stWare2ndWare index=5]
+[func_Click1stWare2ndWare index=6]
+[func_Click1stWare2ndWare index=7]
+
+
 [s]
 
-
+;---------------------------------------------
+; 倉庫と交換：売物棚クリッカブルの着地点
+;---------------------------------------------
 *Click1stWare2ndSale0
 [cm]
 [eval exp="tf.Click1stWare2ndSale = 0"]
@@ -339,6 +442,61 @@
 [emb exp="tf.Click1stWare2ndSale"]と入れ替えます。[p]
 
 [jump target=*MainLoop]
+
+;---------------------------------------------
+; 倉庫と交換：倉庫クリッカブルの着地点
+;---------------------------------------------
+*Click1stWare2ndWare0
+[cm]
+[eval exp="tf.Click1stWare2ndWare = 0"]
+@jump target=*Click1stWare2ndWare
+
+*Click1stWare2ndWare1
+[cm]
+[eval exp="tf.Click1stWare2ndWare = 1"]
+@jump target=*Click1stWare2ndWare
+
+*Click1stWare2ndWare2
+[cm]
+[eval exp="tf.Click1stWare2ndWare = 2"]
+@jump target=*Click1stWare2ndWare
+
+*Click1stWare2ndWare3
+[cm]
+[eval exp="tf.Click1stWare2ndWare = 3"]
+@jump target=*Click1stWare2ndWare
+
+*Click1stWare2ndWare4
+[cm]
+[eval exp="tf.Click1stWare2ndWare = 4"]
+@jump target=*Click1stWare2ndWare
+
+*Click1stWare2ndWare5
+[cm]
+[eval exp="tf.Click1stWare2ndWare = 5"]
+@jump target=*Click1stWare2ndWare
+
+*Click1stWare2ndWare6
+[cm]
+[eval exp="tf.Click1stWare2ndWare = 6"]
+@jump target=*Click1stWare2ndWare
+*Click1stWare2ndWare7
+[cm]
+[eval exp="tf.Click1stWare2ndWare = 7"]
+@jump target=*Click1stWare2ndWare
+
+*Click1stWare2ndWare
+
+[iscript]
+	tf.dummy = f.warehouse[tf.Click1stWare].item_no;
+	f.warehouse[tf.Click1stWare].item_no = f.warehouse[tf.Click1stWare2ndWare].item_no;
+	f.warehouse[tf.Click1stWare2ndWare].item_no = tf.dummy;
+[endscript]
+
+[emb exp="tf.Click1stWare2ndWare"]と入れ替えます。[p]
+
+[jump target=*MainLoop]
+
 
 *End
 1日が終わりました。[p]
