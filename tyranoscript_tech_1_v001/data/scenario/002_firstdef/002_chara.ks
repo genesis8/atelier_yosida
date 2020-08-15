@@ -58,7 +58,7 @@
 ; キャラを表示するマクロ
 ;------------------------------
 [macro name="func_face_show"]
-	[chara_show name="%name" layer="message0" left="2" top="482" width="156" zindex="101" time="100"]
+	[chara_show name="%name" layer="message0" face="%face" left="2" top="482" width="156" zindex="101" time="100"]
 [endmacro]
 
 [macro name="func_face_hide"]
@@ -66,7 +66,7 @@
 [endmacro]
 
 [macro name="func_face_mod"]
-	[chara_hide layer="message0" name="%name" time="100"]
+	[chara_hide layer="message0" name="%name" face="%face" time="100"]
 [endmacro]
 
 [return]
