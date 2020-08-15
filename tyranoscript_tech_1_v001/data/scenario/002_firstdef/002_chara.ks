@@ -17,11 +17,17 @@
 [chara_face name="yoshida"   face="sad"    storage="chara/001_yoshida/sad.png"     ]
 
 ; ヨウムを定義
-[chara_new  name="youmu"  jname="ヨウム" storage="chara/002_youmu/normal.png"  ]
-[chara_face name="youmu"   face="angry"  storage="chara/002_youmu/angry.png"   ]
-[chara_face name="youmu"   face="doki"   storage="chara/002_youmu/doki.png"    ]
-[chara_face name="youmu"   face="happy"  storage="chara/002_youmu/happy.png"   ]
-[chara_face name="youmu"   face="sad"    storage="chara/002_youmu/sad.png"     ]
+[chara_new  name="youmu"  jname="ヨウム"  storage="chara/002_youmu/normal.png"  ]
+[chara_face name="youmu"   face="angry"   storage="chara/002_youmu/angry.png"   ]
+[chara_face name="youmu"   face="doki"    storage="chara/002_youmu/doki.png"    ]
+[chara_face name="youmu"   face="happy"   storage="chara/002_youmu/happy.png"   ]
+[chara_face name="youmu"   face="sad"     storage="chara/002_youmu/sad.png"     ]
+[chara_face name="youmu"   face="ase"     storage="chara/002_youmu/ase.png"     ]
+[chara_face name="youmu"   face="confuse" storage="chara/002_youmu/confuse.png" ]
+[chara_face name="youmu"   face="doya"    storage="chara/002_youmu/doya.png"    ]
+[chara_face name="youmu"   face="kobi"    storage="chara/002_youmu/kobi.png"    ]
+[chara_face name="youmu"   face="noroi"   storage="chara/002_youmu/noroi.png"   ]
+[chara_face name="youmu"   face="tere"    storage="chara/002_youmu/tere.png"    ]
 
 ; ウシジマを定義
 [chara_new  name="ushijima"  jname="ウシジマ" storage="chara/003_ushijima/normal.png"  ]

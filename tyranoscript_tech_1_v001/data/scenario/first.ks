@@ -83,7 +83,9 @@
 
 ; キャラクターの定義を行うサブルーチンラベルです。
 
-; [chara_new][chara_face]x4 あかねを定義しています。
+[call storage="002_firstdef/002_chara.ks"]
+
+/*
 [chara_new  name="akane"  jname="あかね" storage="chara/akane/normal.png"  ]
 [chara_face name="akane"   face="angry"  storage="chara/akane/angry.png"   ]
 [chara_face name="akane"   face="doki"   storage="chara/akane/doki.png"    ]
@@ -106,6 +108,7 @@
 
 ; ウシジマを定義
 [chara_new  name="ushijima"  jname="ウシジマ" storage="chara/003_ushijima/normal.png"  ]
+*/
 
 ; [return] 帰ります。
 [return]
