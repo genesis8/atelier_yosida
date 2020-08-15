@@ -294,7 +294,9 @@
 	if (tf.Click1stSale == tf.Click1stSale2ndSale)
 	{
 		tf.item_menu_flg = true;
-		f.item_menu_target = tf.Click1stWare2ndWare;
+		f.im_item_no = f.sale_shelf[tf.Click1stSale2ndSale].item_no;
+		f.im_slot_num = tf.Click1stSale2ndSale
+		f.im_saleorshelf = "SALE";
 	}
 [endscript]
 
@@ -302,7 +304,7 @@
 [jump storage="001_main/012_item_menu.ks" cond="tf.item_menu_flg"]
 
 ; それ以外は通常の交換
-[emb exp="tf.Click1stWare2ndWare"]と入れ替えます。[p]
+[emb exp="tf.Click1stSale2ndSale"]と入れ替えます。[p]
 
 [jump target=*MainLoop]
 
@@ -509,7 +511,9 @@
 	if (tf.Click1stWare == tf.Click1stWare2ndWare)
 	{
 		tf.item_menu_flg = true;
-		f.item_menu_target = tf.Click1stWare2ndWare;
+		f.im_item_no = f.warehouse[tf.Click1stWare2ndWare].item_no;
+		f.im_slot_num = tf.Click1stWare2ndWare
+		f.im_saleorshelf = "WAREHOUSE";
 	}
 [endscript]
 
