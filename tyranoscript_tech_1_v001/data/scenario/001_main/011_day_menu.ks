@@ -284,13 +284,25 @@
 @jump target=*Click1stSale2ndSale
 
 *Click1stSale2ndSale
-[emb exp="tf.Click1stSale2ndSale"]と入れ替えます。[p]
 
 [iscript]
 	tf.dummy = f.sale_shelf[tf.Click1stSale2ndSale].item_no;
 	f.sale_shelf[tf.Click1stSale2ndSale].item_no = f.sale_shelf[tf.Click1stSale].item_no;
 	f.sale_shelf[tf.Click1stSale].item_no = tf.dummy;
+	
+	tf.item_menu_flg = false;
+	if (tf.Click1stSale == tf.Click1stSale2ndSale)
+	{
+		tf.item_menu_flg = true;
+		f.item_menu_target = tf.Click1stWare2ndWare;
+	}
 [endscript]
+
+; 同じものが選ばれていた場合はアイテム固有メニューへ飛ぶ
+[jump storage="001_main/012_item_menu.ks" cond="tf.item_menu_flg"]
+
+; それ以外は通常の交換
+[emb exp="tf.Click1stWare2ndWare"]と入れ替えます。[p]
 
 [jump target=*MainLoop]
 
@@ -491,8 +503,20 @@
 	tf.dummy = f.warehouse[tf.Click1stWare].item_no;
 	f.warehouse[tf.Click1stWare].item_no = f.warehouse[tf.Click1stWare2ndWare].item_no;
 	f.warehouse[tf.Click1stWare2ndWare].item_no = tf.dummy;
+	
+	tf.item_menu_flg = false;
+	
+	if (tf.Click1stWare == tf.Click1stWare2ndWare)
+	{
+		tf.item_menu_flg = true;
+		f.item_menu_target = tf.Click1stWare2ndWare;
+	}
 [endscript]
 
+; 同じものが選ばれていた場合はアイテム固有メニューへ飛ぶ
+[jump storage="001_main/012_item_menu.ks" cond="tf.item_menu_flg"]
+
+; それ以外は通常の交換
 [emb exp="tf.Click1stWare2ndWare"]と入れ替えます。[p]
 
 [jump target=*MainLoop]
