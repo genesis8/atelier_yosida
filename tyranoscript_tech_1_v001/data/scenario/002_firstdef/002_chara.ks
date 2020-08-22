@@ -10,11 +10,15 @@
 [chara_face name="akane"   face="sad"    storage="chara/akane/sad.png"     ]
 
 ; ヨシダを定義
-[chara_new  name="yoshida"  jname="ヨシダ" storage="chara/001_yoshida/normal.png"  ]
-[chara_face name="yoshida"   face="angry"  storage="chara/001_yoshida/angry.png"   ]
-[chara_face name="yoshida"   face="doki"   storage="chara/001_yoshida/doki.png"    ]
-[chara_face name="yoshida"   face="happy"  storage="chara/001_yoshida/happy.png"   ]
-[chara_face name="yoshida"   face="sad"    storage="chara/001_yoshida/sad.png"     ]
+[chara_new  name="yoshida"  jname="ヨシダ"  storage="chara/001_yoshida/normal.png"  ]
+[chara_face name="yoshida"   face="angry"   storage="chara/001_yoshida/angry.png"   ]
+[chara_face name="yoshida"   face="doki"    storage="chara/001_yoshida/doki.png"    ]
+[chara_face name="yoshida"   face="happy"   storage="chara/001_yoshida/happy.png"   ]
+[chara_face name="yoshida"   face="sad"     storage="chara/001_yoshida/sad.png"     ]
+[chara_face name="yoshida"   face="ase"     storage="chara/001_yoshida/ase.png"     ]
+[chara_face name="yoshida"   face="confuse" storage="chara/001_yoshida/confuse.png" ]
+[chara_face name="yoshida"   face="doya"    storage="chara/001_yoshida/doya.png"    ]
+[chara_face name="yoshida"   face="kobi"    storage="chara/001_yoshida/kobi.png"    ]
 
 ; ヨウムを定義
 [chara_new  name="youmu"  jname="ヨウム"  storage="chara/002_youmu/normal.png"  ]
