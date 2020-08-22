@@ -77,7 +77,7 @@ var __tyrano_key_config = {
 
     //マウス操作
     "mouse" : {
-        "right" : "hidemessage", //右クリックの動作
+        //"right" : "hidemessage", //右クリックの動作
         "center": "menu", //センターボタンをクリック
         "wheel_up" : "backlog", // ホイールをアップした時の動作
         "wheel_down" : "next" //ホイールをダウンした時の動作
